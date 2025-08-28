@@ -48,6 +48,7 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 - Architectury
 - Arsenal
 - Origins
+- Gravestone: Core
 
 ### Usage Instructions
 Do not bind any of the origins powers while using this powerset, and instead just use the standard Palladium keybinds.
