@@ -14,7 +14,7 @@
 > **Soul Manipulation**  
 > - 1 | Freeze - This ability will freeze anything surrounding you in place, preventing them from moving for a short duration.
 > - 2 | Burn - This ability allows you to light the soul of an entity on fire, resulting in them catching alight.
-> - 3 | Bury - You are able to bury an entity in the ground by causing their soul to fall.
+> - 3 | Telekinesis - You are able to control an entity by grabbing onto their soul.
 > - 4 | Glare - This ability allows you to damage an entites soul with a piercing glare.
 > 
 > **Self Soul Manipulation**  
