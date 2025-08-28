@@ -22,19 +22,19 @@
 > - 2 | Saturate - You are able to feed your soul, granting you saturative effects.
 
 **Abilities (Page 2):**  
-> **Grim Punch**
+> **Grim Punch**  
 > You are able to create a punch so forceful that you will create an explosion.
 >
-> **Short Teleport**
+> **Short Teleport**  
 > You are able to quickly dissapear and reappear a short distance in front of yourself.
 > 
-> **Burying Stomp**
+> **Burying Stomp**  
 > You can use your strength to stomp forcefully on the ground, resulting in a crater being created.
 >
-> **Reaper's Rage**
+> **Reaper's Rage**  
 > Channelling all of your rage, you are able to boost your physical damage output for 1 minute and 30 seconds, with a cooldown of 45 seconds.
 >
-> **Soul Block**
+> **Soul Block**  
 > You are able to prevent the souls of your enemies from attacking yours, blocking their attacks. You are unable to move or use any attacks while blocking.
 
 **Power Obtainment**  
