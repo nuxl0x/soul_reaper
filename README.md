@@ -47,7 +47,7 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 - Rhino
 - Architectury
 - Arsenal
-- soulib
+- Xnopyt
 
 **Credits**  
 nuxl0x (Creator)  
