@@ -50,10 +50,11 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 - Origins
 
 ### Usage Instructions
-Do not bind any of the origins powers while using this powerset, and instead just use the standard Palladium keybinds.  
-In the workings of this powerset, there are scripts that trigger the origins powers from the Palladium keybinds instead.  
+Do not bind any of the origins powers while using this powerset, and instead just use the standard Palladium keybinds.
+In the workings of this powerset, there are scripts that trigger the origins powers from the Palladium keybinds instead.
 This is due to the fact that Palladium does not have a built-in raycast power.  
-Make sure that you pick the 'Soul Reaper' origin in the origin selection GUI, or else this pack will not function properly.
+
+**Make sure that you pick the 'Soul Reaper' origin in the origin selection GUI, or else this pack will not function properly.**
 
 **Credits**  
 nuxl0x (Creator)  
