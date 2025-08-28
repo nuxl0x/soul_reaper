@@ -47,8 +47,8 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 - Rhino
 - Architectury
 - Arsenal
-- SoulLib
+- soulib
 
 **Credits**  
-nuxl0x (Creator)
-'Grim Reaper' (Origin) by <user>  
+nuxl0x (Creator)  
+'Grim Reaper' (Origin) by <user>   
