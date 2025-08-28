@@ -1,7 +1,7 @@
 # Soul Reaper
 'Soul Reaper' is a Palladium addonpack that adds the custom powerset of 'Soul Reaper' into the game of minecraft. This power has a variety of different abilities and aims to offer a variety of interesting gameplay for people that enjoy playing powersets with both magic and physical powers.
 
-**Abilities (Page 1):**  
+### Abilities (Page 1):  
 > **Reaper Transformation**  
 > Allows you to transform between your invisible reaper form and your human form. When not in human form you are unable to use any of your other abilities.
 >
@@ -21,7 +21,7 @@
 > - 1 | Heal - This ability allows you to strongly maintain the shape of your own soul, resulting in healing effects.
 > - 2 | Saturate - You are able to feed your soul, granting you saturative effects.
 
-**Abilities (Page 2):**  
+### Abilities (Page 2): 
 > **Grim Punch**  
 > You are able to create a punch so forceful that you will create an explosion.
 >
@@ -37,16 +37,17 @@
 > **Soul Block**  
 > You are able to prevent the souls of your enemies from attacking yours, blocking their attacks. You are unable to move or use any attacks while blocking.
 
-**Power Obtainment**  
+### Power Obtainment 
 You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scythe in survival, and then crafting it in the smithing table with a Wither Skeleton Skull and a Netherite Smithing Template. This will result in you obtaining a 'Soul Pact' which, when used, will give you the powers of the Soul Reaper. This will consume the Scythe.
 
-**Dependencies**
-Palladium
-PantheonSent
-KubeJS
-Rhino
-Arsenal
-SoulLib
+### Dependencies
+- Palladium
+- PantheonSent
+- KubeJS
+- Rhino
+- Architectury
+- Arsenal
+- SoulLib
 
 **Credits**  
 nuxl0x (Creator)
