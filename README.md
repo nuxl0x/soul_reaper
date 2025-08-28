@@ -1,5 +1,5 @@
 # Soul Reaper
-'Soul Reaper' is a Palladium addonpack that adds the custom powerset of 'Soul Reaper' into the game of minecraft. This power has a variety of different abilities and aims to offer a variety of interesting gameplay for people that enjoy playing powersets with both magic and physical powers.
+'Soul Reaper' is a Palladium addonpack that adds the custom powerset of 'Soul Reaper' into the game of Minecraft. This power has a variety of different abilities and aims to offer a variety of interesting gameplay for people that enjoy playing powersets with both magic and physical powers.
 
 ### Abilities (Page 1):  
 > **Reaper Transformation**  
