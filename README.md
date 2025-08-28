@@ -51,4 +51,4 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 
 **Credits**  
 nuxl0x (Creator)  
-Inspired by the 'Grim Reaper' origin.
+Inspired by the <a href="https://discord.com/channels/734127708488859831/1310581678980206653">'Grim Reaper'</a> origin made by grantzeth. 
