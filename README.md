@@ -54,7 +54,7 @@ This is due to the fact that Palladium does not have a built-in raycast power.
 
 If you are using commands in order to give yourself the powers, make sure to run the following:  
 `/superpower set soul_reaper:soul_reaper <user>`  
-`/origin set <user> soul_reaper:reaper`
+`/origin set <user> origins:origin soul_reaper:reaper`
 
 **Credits**  
 nuxl0x (Creator)  
