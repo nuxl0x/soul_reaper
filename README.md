@@ -37,8 +37,6 @@
 ### Power Obtainment 
 You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scythe in survival, and then crafting it in the smithing table with a Wither Skeleton Skull and a Netherite Smithing Template. This will result in you obtaining a 'Soul Pact' which, when used, will give you the powers of the Soul Reaper.  
 
-This pack adds a crafting recipe for the Scythe, which requires 15 iron ingots and 2 sticks.
-
 ### Dependencies
 - Palladium
 - PantheonSent
