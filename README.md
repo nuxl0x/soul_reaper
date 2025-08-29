@@ -5,17 +5,14 @@
 > **Reaper Transformation**  
 > Allows you to transform between your invisible reaper form and your human form. When not in human form you are unable to use any of your other abilities.
 >
-> **Soulfire Beam**  
-> This ability allows you to fire off a beam of soul energy that will deal heavy damage to anything that it hits.
+> **Soulsiphon Surge / Glare**  
+> This ability allows you to fire off a beam of soul energy that will deal heavy damage to anything that it hits, if you are holding a scythe. Otherwise, you will use a weaker beam.
 >
-> **Scythe Slash**  
-> Allows you to slash your scythe in a radius around you, damaging entities in an area.
+> **Field of Torment**  
+> Allows you to release your energy in a radius around you, damaging surrounding entities and manipulating their souls to either light them on fire, or freeze them in ice.
 > 
 > **Soul Manipulation**  
-> - 1 | Freeze - This ability will freeze anything surrounding you in place, preventing them from moving for a short duration.
-> - 2 | Burn - This ability allows you to light the soul of an entity on fire, resulting in them catching alight.
-> - 3 | Telekinesis - You are able to control an entity by grabbing onto their soul.
-> - 4 | Glare - This ability allows you to damage an entites soul with a piercing glare.
+> You are able to control an entity by grabbing onto their soul, giving you the ability to move them around telekinetically.
 > 
 > **Self Soul Manipulation**  
 > - 1 | Heal - This ability allows you to strongly maintain the shape of your own soul, resulting in healing effects.
@@ -38,7 +35,7 @@
 > You are able to prevent the souls of your enemies from attacking yours, blocking their attacks. You are unable to move or use any attacks while blocking.
 
 ### Power Obtainment 
-You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scythe in survival, and then crafting it in the smithing table with a Wither Skeleton Skull and a Netherite Smithing Template. This will result in you obtaining a 'Soul Pact' which, when used, will give you the powers of the Soul Reaper. This will consume the Scythe.
+You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scythe in survival, and then crafting it in the smithing table with a Wither Skeleton Skull and a Netherite Smithing Template. This will result in you obtaining a 'Soul Pact' which, when used, will give you the powers of the Soul Reaper.
 
 ### Dependencies
 - Palladium
