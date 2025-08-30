@@ -12,6 +12,9 @@
 > Allows you to release your energy in a radius around you, damaging surrounding entities and manipulating their souls to either light them on fire, freeze them in ice, or electrocute them.
 
 ### Abilities (Page 2): 
+> **Combat Mode**  
+> Is required to be active in order to use the rest of the Page 2 powers, needs to be active in order to block.
+> 
 > **Grim Punch**  
 > You are able to create a punch so forceful that you will create an explosion.
 >
@@ -23,7 +26,8 @@
 >
 > **Reaper's Rage**  
 > Channelling all of your rage, you are able to boost your physical damage output for 1 minute and 30 seconds, with a cooldown of 45 seconds.
->
+
+### Additional Abilities:
 > **Soul Block**  
 > You are able to prevent the souls of your enemies from attacking yours, blocking their attacks. You are unable to move or use any attacks while blocking.
 
