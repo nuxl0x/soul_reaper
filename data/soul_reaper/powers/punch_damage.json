@@ -1,0 +1,9 @@
+{
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "palladium:punch_damage",
+        "operation": "addition",
+        "value": 20
+    },
+    "update_health": false
+}
