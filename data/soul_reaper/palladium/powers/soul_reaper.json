@@ -1,0 +1,673 @@
+{
+    "name": "Soul Reaper",
+    "background": "minecraft:textures/block/black_wool.png",
+    "icon": "minecraft:skeleton_skull",
+    "gui_display_type": "list",
+
+    "abilities": {
+
+        "transform": {
+            "type": "palladium:dummy",
+            "title": "Reaper Transformation",
+            "icon": "minecraft:skeleton_skull",
+            "description": "This ability allows you to transform between your form of being incorporeal and your physical form.",
+            "list_index": 0,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle"
+                    }
+                ]
+            }
+        },
+
+        "transform_invisibility": {
+            "type": "palladium:invisibility",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "transform"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+
+        "transform_immortality": {
+            "type": "palladium:immortality",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "transform"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+
+        "transform_intangibility1": {
+            "type": "palladium:intangibility",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "transform"
+                            },
+                            {
+                                "type": "palladium:is_hovering_or_flying"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+
+        "transform_intangibility2": {
+            "type": "palladium:intangibility",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "vertical": true,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "transform"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "palladium:is_hovering_or_flying"
+                    }
+                ]
+            }
+        },
+
+        "transform_scoreboard": {
+            "type": "palladium:command",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "first_tick_commands": [
+                "/scoreboard players set @s soul.transformed 1"
+            ],
+            "last_tick_commands": [
+                "/scoreboard players set @s soul.transformed 0"
+            ],
+            "commands": [],
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+                ]
+            }
+        },
+
+        "grim_flight": {
+            "type": "palladium:attribute_modifier",
+            "title": "Grim Flight",
+            "description": "You are able to harness your powers as the reaper to fly.",
+            "icon": "minecraft:elytra",
+            "hidden_in_bar": true,
+
+            "attribute": "palladium:flight_speed",
+            "amount": 2,
+            "operation": 0
+        },
+
+        "cool_flight": {
+            "type": "palladium:attribute_modifier",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "attribute": "palladium:heroic_flight_type",
+            "amount": 1,
+            "operation": 0
+        },
+
+        "block": {
+            "type": "pantheonsent:moon_knight_blocking",
+            "title": "Soul Block",
+            "description": "You are able to block any oncoming attacks, but are unable to attack while blocking.",
+            "icon": "minecraft:shield",
+            "hidden_in_bar": true,
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "combat_mode"
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "key_type": "right_click"
+                    }
+                ]
+            }
+        },
+        
+        "ability_enabler": {
+            "type": "palladium:dummy",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "block"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "transform"
+                    }
+                ]
+            }
+        },
+
+        "scythe_mainhand": {
+            "type": "palladium:dummy",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "arsenal:scythe"
+                        },
+                        "slot": "mainhand"
+                    }
+                ]
+            }
+        },
+
+        "soulsiphon_surge": {
+            "type": "palladium:command",
+            "title": "Soulsiphon Surge",
+            "description": "This ability allows you to channel a large surge of soul energy through a scythe, resulting in a massive blast.",
+            "icon": "arsenal:scythe",
+            "list_index": 1,
+
+            "commands": [],
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "scythe_mainhand"
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    },
+                    {
+                        "type": "palladium:objective_score",
+                        "objective": "soul.siphon",
+                        "min_score": 0,
+                        "max_score": 0
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action"
+                    },
+                    {
+                        "type": "palladium:false"
+                    }
+                ]
+            }
+        },
+
+        "reaper_glare": {
+            "type": "palladium:command",
+            "title": "Reaper's Glare",
+            "description": "This ability allows you glare at an entity, firing a weaker soul blast, but it doesn't require a scythe.",
+            "icon": "minecraft:ender_eye",
+            "list_index": 1,
+
+            "commands": [],
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "scythe_mainhand"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    },
+                    {
+                        "type": "palladium:objective_score",
+                        "objective": "soul.glare",
+                        "min_score": 0,
+                        "max_score": 0
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action"
+                    },
+                    {
+                        "type": "palladium:false"
+                    }
+                ]
+            }
+        },
+
+        "field_ice": {
+            "type": "palladium:command",
+            "title": "Freeze",
+            "hidden": true,
+            "icon": "minecraft:ice",
+            "list_index": 2,
+
+            "commands": [
+                "execute as @e[distance=..20] unless entity @s[palladium.power=soul_reaper:soul_reaper] run effect give @s grave.core:freeze 5 1 true",
+                "particle minecraft:witch ~ ~0.4 ~ 9 0 9 0.1 20000",
+                "playsound minecraft:entity.allay.death player @a[distance=0..20] ~ ~ ~",
+                "playsound minecraft:entity.wither.hurt player @a[distance=0..20] ~ ~ ~",
+                "playsound minecraft:entity.ender_dragon.hurt player @a[distance=0..20] ~ ~ ~"
+            ],
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 200
+                    }
+                ]
+            }
+        },
+
+        "field_fire": {
+            "type": "palladium:command",
+            "title": "Flame",
+            "hidden": true,
+            "icon": "minecraft:fire_charge",
+            "list_index": 3,
+
+            "commands": [
+                "execute as @e[distance=..20] unless entity @s[palladium.power=soul_reaper:soul_reaper] run effect give @s grave.core:burning 10 1 true",
+                "particle minecraft:witch ~ ~0.4 ~ 9 0 9 0.1 20000",
+                "playsound minecraft:entity.allay.death player @a[distance=0..20] ~ ~ ~",
+                "playsound minecraft:entity.wither.hurt player @a[distance=0..20] ~ ~ ~",
+                "playsound minecraft:entity.ender_dragon.hurt player @a[distance=0..20] ~ ~ ~"
+            ],
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 200
+                    }
+                ]
+            }
+        },
+
+        "field_shock": {
+            "type": "palladium:command",
+            "title": "Shock",
+            "hidden": true,
+            "icon": "minecraft:lightning_rod",
+            "list_index": 4,
+
+            "commands": [
+                "execute as @e[distance=..20] unless entity @s[palladium.power=soul_reaper:soul_reaper] run effect give @s grave.core:shock 10 1 true",
+                "particle minecraft:witch ~ ~0.4 ~ 9 0 9 0.1 20000",
+                "playsound minecraft:entity.allay.death player @a[distance=0..20] ~ ~ ~",
+                "playsound minecraft:entity.wither.hurt player @a[distance=0..20] ~ ~ ~",
+                "playsound minecraft:entity.ender_dragon.hurt player @a[distance=0..20] ~ ~ ~"
+            ],
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 200
+                    }
+                ]
+            }
+        },
+
+        "field_of_torment": {
+            "type": "palladium:dummy",
+            "title": "Field of Torment",
+            "description": "By controlling the souls of entities in an area around you, you are able to cause them to catch on fire, freeze, or be electrocuted.",
+            "icon": "pantheonsent:lunar_shard"
+        },
+
+        "combat_mode": {
+            "type": "palladium:show_both_arms",
+            "title": "Combat Mode",
+            "description": "Enables Combat Mode.",
+            "icon": "minecraft:soul_lantern",
+            "list_index": 5,
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "transform"
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:toggle"
+                    }
+                ]
+            }
+        },
+
+        "grim_punch": {
+            "type": "palladium:projectile",
+            "title": "Grim Punch",
+            "description": "You are able to condense your energy into a powerful punch.",
+            "icon": "minecraft:netherite_sword",
+            "list_index": 6,
+
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": {
+                "Damage": 6,
+                "Gravity": 0.0,
+                "KnockbackStrength": 3,
+                "ExplosionRadius": 5,
+                "ExplosionCausesFire": false,
+                "ExplosionBlockInteraction": "destroy",
+                "Lifetime": 100,
+                "Appearances": [
+                    {
+                        "Type": "particles",
+                        "ParticleType": "minecraft:end_rod",
+                        "Spread": 0.0
+                    },
+                    {
+                        "Type": "particles",
+                        "ParticleType": "minecraft:end_rod",
+                        "Spread": 1.0
+                    }
+                ]
+            },
+            "inaccuracy": 0,
+            "velocity": 1.5,
+            "swinging_arm": "main_arm",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "combat_mode"
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 100
+                    }
+                ]
+            }
+        },
+
+        "short_teleport": {
+            "type": "palladium:command",
+            "title": "Short Teleport",
+            "description": "You are able to vanish and appear a short distance in front of yourself.",
+            "icon": "minecraft:ender_pearl",
+            "list_index": 7,
+
+            "first_tick_commands": [
+                "particle minecraft:witch ~ ~ ~ 1 1 1 1 50 normal",
+                "playsound minecraft:entity.enderman.teleport player @s[distance=..5] ~ ~ ~ 0.5 2",
+                "function soul_reaper:teleport"
+            ],
+            "last_tick_commands": [
+                "particle minecraft:witch ~ ~ ~ 1 1 1 1 50 normal"
+            ],
+            "commands": [
+                "particle minecraft:witch ~ ~ ~ 1 1 1 1 50 normal"
+            ],
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "combat_mode"
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 20
+                    }
+                ]
+            }
+        },
+
+        "burying_stomp": {
+            "type": "gravestone:explode",
+            "title": "Burying Stomp",
+            "description": "You can use your strength to stomp forcefully on the ground, resulting in a crater being created.",
+            "icon": "minecraft:tnt",
+            "list_index": 8,
+
+            "explosion": 10,
+            "fire": false,
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "combat_mode"
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 100
+                    }
+                ]
+            }
+        },
+
+        "reaper_rage": {
+            "type": "palladium:attribute_modifier",
+            "title": "Reaper's Rage",
+            "description": "Channelling all of your rage, you are able to boost your physical damage output for 1 minute and 30 seconds total, which will recharge when you do not have the power active.",
+            "icon": "minecraft:wither_skeleton_skull",
+            "list_index": 9,
+
+            "attribute": "palladium:punch_damage",
+            "operation": 0,
+            "amount": 20,
+
+            "conditions": {
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "combat_mode"
+                    },
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "ability_enabler"
+                    }
+                ],
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 2400
+                    }
+                ]
+            }
+        },
+
+        "reaper_rage_particles": {
+            "type": "palladium:command",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "commands": [
+                "function soul_reaper:pentagram"
+            ],
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "reaper_rage"
+                    }
+                ]
+            }
+        },
+
+        "health": {
+            "type": "palladium:attribute_modifier",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "attribute": "minecraft:generic.max_health",
+            "amount": 60,
+            "operation": 0
+        },
+
+        "durability": {
+            "type": "palladium:attribute_modifier",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "attribute": "minecraft:generic.armor",
+            "amount": 30,
+            "operation": 0
+        },
+
+        "toughness": {
+            "type": "palladium:attribute_modifier",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "attribute": "minecraft:generic.armor_toughness",
+            "amount": 16,
+            "operation": 0
+        },
+
+        "passive_healing": {
+            "type": "palladium:healing",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "frequency": 20,
+            "amount": 4
+        },
+
+        "immunities": {
+            "type": "palladium:damage_immunity",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "damage_sources": [
+                "minecraft:is_fall",
+                "minecraft:is_explosion"
+            ]
+        },
+
+        "transformation_particles": {
+            "type": "palladium:command",
+            "hidden": true,
+            "hidden_in_bar": true,
+
+            "first_tick_commands": [
+                "particle witch ~ ~ ~ 0.7 1.2 0.7 0 1000"
+            ],
+            "last_tick_commands": [
+                "particle witch ~ ~ ~ 0.7 1.2 0.7 0 1000"
+            ],
+            "commands": [],
+
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "transform"
+                    }
+                ]
+            }
+        }
+    }
+}
