@@ -14,9 +14,8 @@
 > **Soul Manipulation**  
 > You are able to control an entity by grabbing onto their soul, giving you the ability to move them around telekinetically.
 > 
-> **Self Soul Manipulation**  
-> - 1 | Heal - This ability allows you to strongly maintain the shape of your own soul, resulting in healing effects.
-> - 2 | Saturate - You are able to feed your soul, granting you saturative effects.
+> **Grim Protest**  
+> Using your soul energy, you are able to generate a large surge that will knock entites away from you.
 
 ### Abilities (Page 2): 
 > **Grim Punch**  
