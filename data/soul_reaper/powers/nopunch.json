@@ -1,0 +1,13 @@
+{
+    "condition": {
+        "type": "origins:command",
+        "command": "/scoreboard players get @s soul.transformed",
+        "comparison": "==",
+        "compare_to": 0
+    },
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "set_total",
+        "value": 0
+    }
+}
