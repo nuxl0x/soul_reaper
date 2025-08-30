@@ -9,7 +9,7 @@
 > This ability allows you to fire off a beam of soul energy that will deal heavy damage to anything that it hits, if you are holding a scythe. Otherwise, you will use a weaker beam.
 >
 > **Field of Torment**  
-> Allows you to release your energy in a radius around you, damaging surrounding entities and manipulating their souls to either light them on fire, or freeze them in ice.
+> Allows you to release your energy in a radius around you, damaging surrounding entities and manipulating their souls to either light them on fire, freeze them in ice, or electrocute them.
 > 
 > **Soul Manipulation**  
 > You are able to control an entity by grabbing onto their soul, giving you the ability to move them around telekinetically.
