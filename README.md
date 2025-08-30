@@ -46,7 +46,7 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 - Gravestone: Core
 
 ### Usage Instructions
-Ensure that you have your Origins primary keybind bound to the key that you want to use for your second ability slot ('B' is reccomended), and bind the Palladium second ability slot to something useless.
+The ability that uses the Origins bind is the second ability on the first page. As such, the Palladium prompts won't respond when you use the Palladium bind for that ability, and you are instead encouraged to bind Origins Primary to 'C'.
 
 If you are using commands in order to give yourself the powers, make sure to run the following:  
 `/superpower set soul_reaper:soul_reaper <user>`  
