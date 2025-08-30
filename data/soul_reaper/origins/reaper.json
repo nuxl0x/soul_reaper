@@ -1,0 +1,15 @@
+{
+    "name": "The Soul Reaper",
+    "description": "The one of all. You are the collector of souls and the guide to the afterlife.",
+    "powers": [
+        "soul_reaper:glare",
+        "soul_reaper:blast-y",
+        "soul_reaper:nopunch",
+        "soul_reaper:punch_damage"
+    ],
+    "icon": {
+        "item": "minecraft:skeleton_skull"
+    },
+    "impact": 3,
+    "unchoosable": true
+}
