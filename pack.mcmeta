@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "id": "soul_reaper",
+    "description": "Soul Reaper | Palladium & Origins Addonpack",
+    "pack_format": 15,
+    "version": "1.0.0"
+  },
+  "dependencies": {
+    "common": {
+    },
+    "fabric": {
+    },
+    "forge": {
+    }
+  }
+}

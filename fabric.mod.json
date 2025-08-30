@@ -1,0 +1,11 @@
+{
+    "schemaVersion": 1,
+    "authors": [],
+    "environment": "*",
+    "name": "Soul Reaper",
+    "id": "soul_reaper",
+    "version": "1.0.0",
+    "description": "Soul Reaper | Palladium & Origins Addonpack",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}
