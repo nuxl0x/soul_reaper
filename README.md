@@ -10,12 +10,6 @@
 >
 > **Field of Torment**  
 > Allows you to release your energy in a radius around you, damaging surrounding entities and manipulating their souls to either light them on fire, freeze them in ice, or electrocute them.
-> 
-> **Soul Manipulation**  
-> You are able to control an entity by grabbing onto their soul, giving you the ability to move them around telekinetically.
-> 
-> **Grim Protest**  
-> Using your soul energy, you are able to generate a large surge that will knock entites away from you.
 
 ### Abilities (Page 2): 
 > **Grim Punch**  
