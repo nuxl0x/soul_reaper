@@ -44,6 +44,7 @@ You are able to obtain the 'Soul Reaper' power by successfully obtaining a Scyth
 - Rhino
 - Architectury
 - Arsenal
+- Ratatouille
 - Origins
 - Gravestone: Core
 
