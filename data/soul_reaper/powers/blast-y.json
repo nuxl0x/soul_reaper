@@ -1,0 +1,198 @@
+{
+    "name": "Soulsiphon Surge",
+    "description": "> The ethereal might of your scythe extends to the soul, channeling a devastating beam from the Grim Scythe, capable of striking at the very essence of existence.\n> Press [Secondary] with Grim Scythe to unleash a soul-draining blast, reducing the target's max HP.\n> This power cannot work a second time at the same entity.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "arsenal:scythe"
+                    }
+                }
+            },
+            {
+                "inverted": true,
+                "type": "origins:gamemode",
+                "gamemode": "spectator"
+            },
+            {
+                "type": "origins:command",
+                "command": "/scoreboard players get @s soul.transformed",
+                "comparison": "==",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:raycast",
+                "distance": 150,
+                "block": false,
+                "entity": true,
+                "shape_type": "visual",
+                "fluid_handling": "any",
+                "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/attribute @s minecraft:generic.max_health modifier add 123e4567-e89b-12d3-a456-426614174000 less -10 add"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "effect give @s wither 4 1 true"
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:and",
+                                            "actions": [
+                                                {
+                                                    "type": "origins:damage",
+                                                    "amount": 40,
+                                                    "source": {
+                                                        "name": "generic",
+                                                        "bypasses_armor": false,
+                                                        "unblockable": false
+                                                    },
+                                                    "damage_type": "generic"
+                                                }
+                                            ]
+                                        },
+                                        "ticks": 1
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/particle minecraft:reverse_portal ~ ~1 ~ 2 2 2 20 5000"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3 0.7"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/playsound minecraft:entity.vex.death player @a ~ ~ ~ 3 0.7"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "effect give @s slowness 25 1 true"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "effect give @s weakness 25 0 true"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "effect give @s nausea 5 0 true"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/particle minecraft:witch ~ ~1 ~ 1.2 1.2 1.2 100 1000"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "origins:actor_action",
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3 0.7"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/playsound minecraft:entity.vex.death player @a ~ ~ ~ 3 0.7"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/particle minecraft:witch ~ ~ ~ 1.2 0 1.2 100 1000"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "before_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "/playsound minecraft:entity.allay.death player @a ~ ~ ~ 3 0.7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "/playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 3 0.7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "/playsound minecraft:entity.wither.ambient player @a ~ ~ ~ 3 0.7"
+                        }
+                    ]
+                },
+                "hit_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "/playsound minecraft:block.note_block.didgeridoo player @s ~ ~ ~ 5 0.5"
+                        }
+                    ]
+                },
+                "miss_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:revoke_power",
+                            "power": "soul_reaper:blast-y",
+                            "source": "soul_reaper:reaper"
+                        },
+                        {
+                            "type": "origins:delay",
+                            "action": {
+                                "type": "origins:grant_power",
+                                "power": "soul_reaper:blast-y",
+                                "source": "soul_reaper:reaper"
+                            },
+                            "ticks": 1
+                        }
+                    ]
+                },
+                "command_along_ray": "/particle minecraft:witch ~ ~-1 ~ 0.2 0.2 0.2 100 200",
+                "command_step": 1
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "/scoreboard players set @s soul.siphon 1"
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "/scoreboard players set @s soul.siphon 0"
+                },
+                "ticks": 100
+            }
+        ]
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": false,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 7
+    },
+    "key": "primary"
+}
