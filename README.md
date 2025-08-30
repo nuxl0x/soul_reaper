@@ -22,7 +22,7 @@
 > You are able to create a punch so forceful that you will create an explosion.
 >
 > **Short Teleport**  
-> You are able to quickly dissapear and reappear a short distance in front of yourself.
+> You are able to quickly vanish and reappear a short distance in front of yourself.
 > 
 > **Burying Stomp**  
 > You can use your strength to stomp forcefully on the ground, resulting in a crater being created.
