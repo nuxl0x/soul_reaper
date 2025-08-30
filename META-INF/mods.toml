@@ -1,0 +1,21 @@
+modLoader = 'lowcodefml'
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="soul_reaper"
+displayName="Soul Reaper"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+description='''
+Soul Reaper | Palladium & Origins Addonpack
+'''
+
+[[dependencies.soul_reaper]]
+modId = "palladium"
+mandatory = true
+versionRange = ">=4.2.4"
+ordering = "NONE"
+side = "BOTH"
